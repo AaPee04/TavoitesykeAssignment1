@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, View } from "react-native";
 
 export default function App() {
-  const [age, setAge] = useState<string>("")
+  const [age, setAge] = useState("")
   const ageasNum: number = !isNaN(Number(age)) === true ? Number(age) : 0
   const lower: number = (220 - ageasNum) * 0.65
   const upper: number = (220 - ageasNum) * 0.85
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Heart Rate limit calculator</Text>
-      <Text style={styles.text}>Enter your age</Text>
+      <Text style={styles.text}>Enter your age:</Text>
       <TextInput
         keyboardType="number-pad"
         value={age}
