@@ -11,9 +11,13 @@ export default function App() {
       <Text style={styles.heading}>Heart Rate limit calculator</Text>
       <Text style={styles.text}>Enter your age:</Text>
       <TextInput
+        style={styles.inputBubble}
         keyboardType="number-pad"
+        returnKeyType="done"
         value={age}
         onChangeText={setAge}
+        placeholder=""
+        placeholderTextColor="#888"
       />
       <Text style={styles.text}>
         Lower limit {lower.toFixed(2)} bpm
@@ -32,11 +36,27 @@ const styles = StyleSheet.create({
     margin: 16
   },
   heading: {
-    fontSize: 24,
+    fontSize: 32,
     marginTop: 32,
     marginBottom: 16
   },
   text: {
     marginVertical: 16
+  },
+  inputBubble: {
+    backgroundColor: "#f0f0f0",
+    borderRadius: 25,
+    paddingVertical: 12, 
+    paddingHorizontal: 20,
+    fontSize: 18,
+    textAlign: "center",   
+    marginVertical: 16,
+    borderWidth: 1,
+    borderColor: "#ccc",  
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+    elevation: 2,     
   }
 });
