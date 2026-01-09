@@ -9,6 +9,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <Text style={styles.heading}>Heart Rate limit calculator</Text>
+            <Text style={styles.text}>Enter your age</Text>
             <TextInput
                 keyboardType="number-pad"
                 value={age}
